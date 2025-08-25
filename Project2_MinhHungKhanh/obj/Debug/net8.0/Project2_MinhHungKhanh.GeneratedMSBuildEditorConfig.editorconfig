@@ -28,6 +28,26 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/mhkHome/mhkAbout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbWhrSG9tZVxtaGtBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

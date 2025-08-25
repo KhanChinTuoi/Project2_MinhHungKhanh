@@ -1,9 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Project2_MinhHungKhanh.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var connectionString = builder.Configuration.GetConnectionString("MHK_Project2");
+builder.Services.AddDbContext<MhkProject2Context>(x => x.UseSqlServer(connectionString));
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
