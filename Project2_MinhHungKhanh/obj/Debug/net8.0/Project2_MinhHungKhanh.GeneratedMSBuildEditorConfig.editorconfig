@@ -17,165 +17,165 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project2_MinhHungKhanh
 build_property.RootNamespace = Project2_MinhHungKhanh
-build_property.ProjectDir = C:\Project2MinhHungKhanh\Project2_MinhHungKhanh\Project2_MinhHungKhanh\
+build_property.ProjectDir = D:\Project-2\Project2_MinhHungKhanh\Project2_MinhHungKhanh\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Project2MinhHungKhanh\Project2_MinhHungKhanh\Project2_MinhHungKhanh
+build_property.MSBuildProjectDirectory = D:\Project-2\Project2_MinhHungKhanh\Project2_MinhHungKhanh
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkAddresses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQWRkcmVzc2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkCategories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/mhkHome/mhkAbout.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/mhkHome/mhkAbout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbWhrSG9tZVxtaGtBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/mhkHome/mhkIndex.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/mhkHome/mhkIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbWhrSG9tZVxtaGtJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJEZXRhaWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJEZXRhaWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJEZXRhaWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJEZXRhaWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrderDetails/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJEZXRhaWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkOrders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkProducts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Create.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Delete.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Details.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Edit.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Index.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/MhkUsers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWhrVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/mhkError.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/mhkError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG1oa0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_mhkNavBar.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_mhkNavBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9taGtOYXZCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/_ViewImports.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/_ViewStart.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Project2MinhHungKhanh/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_mhkLayout.cshtml]
+[D:/Project-2/Project2_MinhHungKhanh/Project2_MinhHungKhanh/Views/Shared/_mhkLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9taGtMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wmksy60p3u
