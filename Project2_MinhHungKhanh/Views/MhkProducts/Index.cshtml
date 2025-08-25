@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkProduct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkCategory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkCategory.MhkCategoryId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MhkProductId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MhkProductId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MhkProductId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

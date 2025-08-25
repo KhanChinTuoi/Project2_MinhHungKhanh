@@ -1,0 +1,46 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkProduct
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>MhkProduct</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MhkProductId" />
+            <div class="form-group">
+                <label asp-for="MhkCategoryId" class="control-label"></label>
+                <select asp-for="MhkCategoryId" class="form-control" asp-items="ViewBag.MhkCategoryId"></select>
+                <span asp-validation-for="MhkCategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MhkName" class="control-label"></label>
+                <input asp-for="MhkName" class="form-control" />
+                <span asp-validation-for="MhkName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MhkPrice" class="control-label"></label>
+                <input asp-for="MhkPrice" class="form-control" />
+                <span asp-validation-for="MhkPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MhkDescription" class="control-label"></label>
+                <input asp-for="MhkDescription" class="form-control" />
+                <span asp-validation-for="MhkDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
