@@ -1,0 +1,30 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkUser
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MhkUser</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkFullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkFullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="mhkEdit" asp-route-mhkid="@Model?.MhkUserId">Sửa</a> |
+    <a asp-action="mhkIndex">Quay về danh sách</a>
+</div>

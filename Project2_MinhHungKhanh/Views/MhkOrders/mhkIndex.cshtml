@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkOrder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkOrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MhkUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkOrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MhkUser.MhkUserId)
+            </td>
+            <td>
+                <a asp-action="mhkEdit" asp-route-mhkid="@item.MhkOrderId">Sửa</a> |
+                <a asp-action="mhkDetails" asp-route-mhkid="@item.MhkOrderId">Chi tiết</a> |
+                <a asp-action="mhkDelete" asp-route-mhkid="@item.MhkOrderId">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

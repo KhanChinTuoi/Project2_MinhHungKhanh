@@ -19,23 +19,23 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkProducts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> mhkIndex()
         {
             var mhkProject2Context = _context.MhkProducts.Include(m => m.MhkCategory);
             return View(await mhkProject2Context.ToListAsync());
         }
 
-        // GET: MhkProducts/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: MhkProducts/mhkDetails/5
+        public async Task<IActionResult> Details(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
 
             var mhkProduct = await _context.MhkProducts
                 .Include(m => m.MhkCategory)
-                .FirstOrDefaultAsync(m => m.MhkProductId == id);
+                .FirstOrDefaultAsync(m => m.MhkProductId == mhkid);
             if (mhkProduct == null)
             {
                 return NotFound();
@@ -44,19 +44,19 @@ namespace Project2_MinhHungKhanh.Controllers
             return View(mhkProduct);
         }
 
-        // GET: MhkProducts/Create
-        public IActionResult Create()
+        // GET: MhkProducts/mhkCreate
+        public IActionResult mhkCreate()
         {
             ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId");
             return View();
         }
 
-        // POST: MhkProducts/Create
+        // POST: MhkProducts/mhkCreate
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
+        public async Task<IActionResult> mhkCreate([Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
         {
             if (ModelState.IsValid)
             {
@@ -69,14 +69,14 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkProducts/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> mhkEdit(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
 
-            var mhkProduct = await _context.MhkProducts.FindAsync(id);
+            var mhkProduct = await _context.MhkProducts.FindAsync(mhkid);
             if (mhkProduct == null)
             {
                 return NotFound();
@@ -85,14 +85,14 @@ namespace Project2_MinhHungKhanh.Controllers
             return View(mhkProduct);
         }
 
-        // POST: MhkProducts/Edit/5
+        // POST: MhkProducts/mhkEdit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
+        public async Task<IActionResult> mhkEdit(int mhkid, [Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
         {
-            if (id != mhkProduct.MhkProductId)
+            if (mhkid != mhkProduct.MhkProductId)
             {
                 return NotFound();
             }
@@ -115,23 +115,23 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(mhkIndex));
             }
             ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
             return View(mhkProduct);
         }
 
-        // GET: MhkProducts/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: MhkProducts/mhkDelete/5
+        public async Task<IActionResult> mhkDelete(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
 
             var mhkProduct = await _context.MhkProducts
                 .Include(m => m.MhkCategory)
-                .FirstOrDefaultAsync(m => m.MhkProductId == id);
+                .FirstOrDefaultAsync(m => m.MhkProductId == mhkid);
             if (mhkProduct == null)
             {
                 return NotFound();
@@ -140,24 +140,24 @@ namespace Project2_MinhHungKhanh.Controllers
             return View(mhkProduct);
         }
 
-        // POST: MhkProducts/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: MhkProducts/mhkDelete/5
+        [HttpPost, ActionName("mhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> mhkDeleteConfirmed(int mhkid)
         {
-            var mhkProduct = await _context.MhkProducts.FindAsync(id);
+            var mhkProduct = await _context.MhkProducts.FindAsync(mhkid);
             if (mhkProduct != null)
             {
                 _context.MhkProducts.Remove(mhkProduct);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(mhkIndex));
         }
 
-        private bool MhkProductExists(int id)
+        private bool MhkProductExists(int mhkid)
         {
-            return _context.MhkProducts.Any(e => e.MhkProductId == id);
+            return _context.MhkProducts.Any(e => e.MhkProductId == mhkid);
         }
     }
 }
