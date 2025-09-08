@@ -11,29 +11,29 @@ namespace Project2_MinhHungKhanh.Controllers
 {
     public class MhkProductsController : Controller
     {
-        private readonly MhkProject2Context _context;
+        private readonly MhkProject2Context _mhkContext;
 
-        public MhkProductsController(MhkProject2Context context)
+        public MhkProductsController(MhkProject2Context mhkContext)
         {
-            _context = context;
+            _mhkContext = mhkContext;
         }
 
         // GET: MhkProducts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> mhkIndex()
         {
-            var mhkProject2Context = _context.MhkProducts.Include(m => m.MhkCategory);
+            var mhkProject2Context = _mhkContext.MhkProducts.Include(m => m.MhkCategory);
             return View(await mhkProject2Context.ToListAsync());
         }
 
         // GET: MhkProducts/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> mhkDetails(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkProduct = await _context.MhkProducts
+            var mhkProduct = await _mhkContext.MhkProducts
                 .Include(m => m.MhkCategory)
                 .FirstOrDefaultAsync(m => m.MhkProductId == id);
             if (mhkProduct == null)
@@ -45,52 +45,48 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkProducts/Create
-        public IActionResult Create()
+        public IActionResult mhkCreate()
         {
-            ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId");
+            ViewData["MhkCategoryId"] = new SelectList(_mhkContext.MhkCategories, "MhkCategoryId", "MhkCategoryId");
             return View();
         }
 
         // POST: MhkProducts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
+        public async Task<IActionResult> mhkCreate([Bind("MhkProductId,MhkName,MhkPrice,MhkDescription,MhkCategoryId")] MhkProduct mhkProduct)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mhkProduct);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _mhkContext.Add(mhkProduct);
+                await _mhkContext.SaveChangesAsync();
+                return RedirectToAction(nameof(mhkIndex));
             }
-            ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
+            ViewData["MhkCategoryId"] = new SelectList(_mhkContext.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
             return View(mhkProduct);
         }
 
         // GET: MhkProducts/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> mhkEdit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkProduct = await _context.MhkProducts.FindAsync(id);
+            var mhkProduct = await _mhkContext.MhkProducts.FindAsync(id);
             if (mhkProduct == null)
             {
                 return NotFound();
             }
-            ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
+            ViewData["MhkCategoryId"] = new SelectList(_mhkContext.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
             return View(mhkProduct);
         }
 
         // POST: MhkProducts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MhkProductId,MhkCategoryId,MhkName,MhkPrice,MhkDescription")] MhkProduct mhkProduct)
+        public async Task<IActionResult> mhkEdit(int id, [Bind("MhkProductId,MhkName,MhkPrice,MhkDescription,MhkCategoryId")] MhkProduct mhkProduct)
         {
             if (id != mhkProduct.MhkProductId)
             {
@@ -101,8 +97,8 @@ namespace Project2_MinhHungKhanh.Controllers
             {
                 try
                 {
-                    _context.Update(mhkProduct);
-                    await _context.SaveChangesAsync();
+                    _mhkContext.Update(mhkProduct);
+                    await _mhkContext.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -115,21 +111,21 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(mhkIndex));
             }
-            ViewData["MhkCategoryId"] = new SelectList(_context.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
+            ViewData["MhkCategoryId"] = new SelectList(_mhkContext.MhkCategories, "MhkCategoryId", "MhkCategoryId", mhkProduct.MhkCategoryId);
             return View(mhkProduct);
         }
 
         // GET: MhkProducts/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> mhkDelete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkProduct = await _context.MhkProducts
+            var mhkProduct = await _mhkContext.MhkProducts
                 .Include(m => m.MhkCategory)
                 .FirstOrDefaultAsync(m => m.MhkProductId == id);
             if (mhkProduct == null)
@@ -141,23 +137,23 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // POST: MhkProducts/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("mhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> mhkDeleteConfirmed(int id)
         {
-            var mhkProduct = await _context.MhkProducts.FindAsync(id);
+            var mhkProduct = await _mhkContext.MhkProducts.FindAsync(id);
             if (mhkProduct != null)
             {
-                _context.MhkProducts.Remove(mhkProduct);
+                _mhkContext.MhkProducts.Remove(mhkProduct);
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await _mhkContext.SaveChangesAsync();
+            return RedirectToAction(nameof(mhkIndex));
         }
 
         private bool MhkProductExists(int id)
         {
-            return _context.MhkProducts.Any(e => e.MhkProductId == id);
+            return _mhkContext.MhkProducts.Any(e => e.MhkProductId == id);
         }
     }
 }

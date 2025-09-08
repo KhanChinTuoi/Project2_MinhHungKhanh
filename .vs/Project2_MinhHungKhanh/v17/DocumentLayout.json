@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Project-2\\Project2_MinhHungKhanh\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E13B50D4-9AEC-446B-8A57-8AE1E9E92B8A}|Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj|d:\\moi\\project-2\\project2_minhhungkhanh\\project2_minhhungkhanh\\controllers\\mhkproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E13B50D4-9AEC-446B-8A57-8AE1E9E92B8A}|Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj|solutionrelative:project2_minhhungkhanh\\controllers\\mhkproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E13B50D4-9AEC-446B-8A57-8AE1E9E92B8A}|Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj|d:\\moi\\project-2\\project2_minhhungkhanh\\project2_minhhungkhanh\\controllers\\mhkuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E13B50D4-9AEC-446B-8A57-8AE1E9E92B8A}|Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj|solutionrelative:project2_minhhungkhanh\\controllers\\mhkuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MhkProductsController.cs",
+              "DocumentMoniker": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Controllers\\MhkProductsController.cs",
+              "RelativeDocumentMoniker": "Project2_MinhHungKhanh\\Controllers\\MhkProductsController.cs",
+              "ToolTip": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Controllers\\MhkProductsController.cs",
+              "RelativeToolTip": "Project2_MinhHungKhanh\\Controllers\\MhkProductsController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAswJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T06:18:00.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MhkUsersController.cs",
+              "DocumentMoniker": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Controllers\\MhkUsersController.cs",
+              "RelativeDocumentMoniker": "Project2_MinhHungKhanh\\Controllers\\MhkUsersController.cs",
+              "ToolTip": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Controllers\\MhkUsersController.cs",
+              "RelativeToolTip": "Project2_MinhHungKhanh\\Controllers\\MhkUsersController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAwwJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T06:15:38.048Z",
+              "EditorCaption": ""
             }
           ]
         }

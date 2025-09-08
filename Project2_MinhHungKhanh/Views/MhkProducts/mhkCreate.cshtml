@@ -1,0 +1,54 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkProduct
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Thêm mới</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="mhkCreate">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="MhkCategoryId" class="form-label fw-bold"></label>
+                            <select asp-for="MhkCategoryId" class="form-control" asp-items="ViewBag.MhkCategoryId"></select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MhkName" class="form-label fw-bold"></label>
+                            <input asp-for="MhkName" class="form-control" placeholder="Enter product name" />
+                            <span asp-validation-for="MhkName" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MhkPrice" class="form-label fw-bold"></label>
+                            <input asp-for="MhkPrice" class="form-control" placeholder="Enter product price" />
+                            <span asp-validation-for="MhkPrice" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MhkDescription" class="form-label fw-bold"></label>
+                            <textarea asp-for="MhkDescription" class="form-control" rows="3" placeholder="Enter description"></textarea>
+                            <span asp-validation-for="MhkDescription" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="bi bi-plus-circle"></i> Create
+                            </button>
+                            <a asp-action="mhkIndex" class="btn btn-outline-secondary btn-lg">
+                                <i class="bi bi-arrow-left"></i> Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

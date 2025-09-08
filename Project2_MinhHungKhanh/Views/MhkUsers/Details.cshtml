@@ -1,30 +1,42 @@
 ﻿@model Project2_MinhHungKhanh.Models.MhkUser
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "User Details";
 }
 
-<h1>Details</h1>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-info text-white text-center">
+                    <h3 class="mb-0">User Details</h3>
+                </div>
+                <div class="card-body p-4">
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4 fw-bold">
+                            @Html.DisplayNameFor(model => model.MhkFullName)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.MhkFullName)
+                        </dd>
 
-<div>
-    <h4>MhkUser</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkFullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkFullName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkEmail)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkEmail)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.MhkUserId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+                        <dt class="col-sm-4 fw-bold">
+                            @Html.DisplayNameFor(model => model.MhkEmail)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.MhkEmail)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Edit" asp-route-id="@Model?.MhkUserId" class="btn btn-warning btn-lg me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="Index" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

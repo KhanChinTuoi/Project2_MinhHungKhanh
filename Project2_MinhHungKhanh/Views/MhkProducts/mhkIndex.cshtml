@@ -1,14 +1,14 @@
-﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkUser>
+﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkProduct>
 
 @{
-    ViewData["Title"] = "Admin";
+    ViewData["Title"] = "Danh sách sản phẩm";
 }
 
 <div class="container mt-4">
     <div class="card shadow-lg border-0 rounded-3">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h3 class="mb-0">Admin</h3>
-            <a asp-action="Create" class="btn btn-light btn-sm">
+            <h3 class="mb-0">Danh sách sản phẩm</h3>
+            <a asp-action="mhkCreate" class="btn btn-light btn-sm">
                 <i class="bi bi-plus-circle"></i> Thêm mới
             </a>
         </div>
@@ -16,8 +16,10 @@
             <table class="table table-hover align-middle text-center">
                 <thead class="table-dark">
                     <tr>
-                        <th>Họ tên</th>
-                        <th>Email</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Mô tả</th>
+                        <th>Số lượng</th>
                         <th style="width: 220px;">Thao tác</th>
                     </tr>
                 </thead>
@@ -25,17 +27,19 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@Html.DisplayFor(modelItem => item.MhkFullName)</td>
-                            <td>@Html.DisplayFor(modelItem => item.MhkEmail)</td>
+                            <td>@Html.DisplayFor(modelItem => item.MhkName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.MhkPrice)</td>
+                            <td>@Html.DisplayFor(modelItem => item.MhkDescription)</td>
+                            <td>@Html.DisplayFor(modelItem => item.MhkCategory.MhkCategoryId)</td>
                             <td>
                                 <div class="btn-group" role="group">
-                                    <a asp-action="Edit" asp-route-id="@item.MhkUserId" class="btn btn-sm btn-warning">
+                                    <a asp-action="mhkEdit" asp-route-id="@item.MhkProductId" class="btn btn-sm btn-warning">
                                         <i class="bi bi-pencil-square"></i> Edit
                                     </a>
-                                    <a asp-action="Details" asp-route-id="@item.MhkUserId" class="btn btn-sm btn-info text-white">
+                                    <a asp-action="mhkDetails" asp-route-id="@item.MhkProductId" class="btn btn-sm btn-info text-white">
                                         <i class="bi bi-info-circle"></i> Details
                                     </a>
-                                    <a asp-action="Delete" asp-route-id="@item.MhkUserId" class="btn btn-sm btn-danger">
+                                    <a asp-action="mhkDelete" asp-route-id="@item.MhkProductId" class="btn btn-sm btn-danger">
                                         <i class="bi bi-trash"></i> Delete
                                     </a>
                                 </div>

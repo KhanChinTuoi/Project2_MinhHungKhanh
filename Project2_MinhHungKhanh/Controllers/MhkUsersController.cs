@@ -11,28 +11,28 @@ namespace Project2_MinhHungKhanh.Controllers
 {
     public class MhkUsersController : Controller
     {
-        private readonly MhkProject2Context _context;
+        private readonly MhkProject2Context _mhkContext;
 
-        public MhkUsersController(MhkProject2Context context)
+        public MhkUsersController(MhkProject2Context mhkContext)
         {
-            _context = context;
+            _mhkContext = mhkContext;
         }
 
         // GET: MhkUsers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> mhkIndex()
         {
-            return View(await _context.MhkUsers.ToListAsync());
+            return View(await _mhkContext.MhkUsers.ToListAsync());
         }
 
         // GET: MhkUsers/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> mhkDetails(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkUser = await _context.MhkUsers
+            var mhkUser = await _mhkContext.MhkUsers
                 .FirstOrDefaultAsync(m => m.MhkUserId == id);
             if (mhkUser == null)
             {
@@ -43,36 +43,34 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkUsers/Create
-        public IActionResult Create()
+        public IActionResult mhkCreate()
         {
             return View();
         }
 
         // POST: MhkUsers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MhkUserId,MhkFullName,MhkEmail")] MhkUser mhkUser)
+        public async Task<IActionResult> mhkCreate([Bind("MhkUserId,MhkFullName,MhkEmail")] MhkUser mhkUser)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mhkUser);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _mhkContext.Add(mhkUser);
+                await _mhkContext.SaveChangesAsync();
+                return RedirectToAction(nameof(mhkIndex));
             }
             return View(mhkUser);
         }
 
         // GET: MhkUsers/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> mhkEdit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkUser = await _context.MhkUsers.FindAsync(id);
+            var mhkUser = await _mhkContext.MhkUsers.FindAsync(id);
             if (mhkUser == null)
             {
                 return NotFound();
@@ -81,11 +79,9 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // POST: MhkUsers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MhkUserId,MhkFullName,MhkEmail")] MhkUser mhkUser)
+        public async Task<IActionResult> mhkEdit(int id, [Bind("MhkUserId,MhkFullName,MhkEmail")] MhkUser mhkUser)
         {
             if (id != mhkUser.MhkUserId)
             {
@@ -96,8 +92,8 @@ namespace Project2_MinhHungKhanh.Controllers
             {
                 try
                 {
-                    _context.Update(mhkUser);
-                    await _context.SaveChangesAsync();
+                    _mhkContext.Update(mhkUser);
+                    await _mhkContext.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -110,20 +106,20 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(mhkIndex));
             }
             return View(mhkUser);
         }
 
         // GET: MhkUsers/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> mhkDelete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkUser = await _context.MhkUsers
+            var mhkUser = await _mhkContext.MhkUsers
                 .FirstOrDefaultAsync(m => m.MhkUserId == id);
             if (mhkUser == null)
             {
@@ -134,23 +130,23 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // POST: MhkUsers/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("mhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> mhkDeleteConfirmed(int id)
         {
-            var mhkUser = await _context.MhkUsers.FindAsync(id);
+            var mhkUser = await _mhkContext.MhkUsers.FindAsync(id);
             if (mhkUser != null)
             {
-                _context.MhkUsers.Remove(mhkUser);
+                _mhkContext.MhkUsers.Remove(mhkUser);
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await _mhkContext.SaveChangesAsync();
+            return RedirectToAction(nameof(mhkIndex));
         }
 
         private bool MhkUserExists(int id)
         {
-            return _context.MhkUsers.Any(e => e.MhkUserId == id);
+            return _mhkContext.MhkUsers.Any(e => e.MhkUserId == id);
         }
     }
 }

@@ -1,0 +1,40 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkProduct
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-info text-white text-center">
+                    <h3 class="mb-0">Mô tả chi tiết</h3>
+                </div>
+                <div class="card-body p-4">
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkName)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkName)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkPrice)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkPrice)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkDescription)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkDescription)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkCategory)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkCategory.MhkCategoryId)</dd>
+                    </dl>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="mhkEdit" asp-route-id="@Model?.MhkProductId" class="btn btn-warning btn-lg me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="mhkIndex" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

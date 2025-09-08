@@ -1,0 +1,46 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkProduct
+
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3 class="mb-0">Xoá sản phẩm</h3>
+                </div>
+                <div class="card-body p-4">
+                    <h5 class="text-center text-muted mb-4">Are you sure you want to delete this product?</h5>
+
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkName)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkName)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkPrice)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkPrice)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkDescription)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkDescription)</dd>
+
+                        <dt class="col-sm-4 fw-bold">@Html.DisplayNameFor(model => model.MhkCategory)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MhkCategory.MhkCategoryId)</dd>
+                    </dl>
+
+                    <form asp-action="mhkDelete">
+                        <input type="hidden" asp-for="MhkProductId" />
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                            <a asp-action="mhkIndex" class="btn btn-outline-secondary btn-lg">
+                                <i class="bi bi-arrow-left"></i> Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

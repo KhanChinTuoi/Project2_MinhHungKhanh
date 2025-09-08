@@ -7603,11 +7603,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj",
+      "projectUniqueName": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj",
       "projectName": "Project2_MinhHungKhanh",
-      "projectPath": "D:\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj",
+      "projectPath": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh.csproj",
       "packagesPath": "C:\\Users\\Nguyen Trong Nhat\\.nuget\\packages\\",
-      "outputPath": "D:\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\obj\\",
+      "outputPath": "D:\\Moi\\Project-2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
