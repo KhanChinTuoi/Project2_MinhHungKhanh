@@ -2,7 +2,57 @@
     ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Chào mừng đến với MHK Cafe</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core"></a></p>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="container my-3">
+        <form asp-controller="MhkProducts" asp-action="MhkIndex" method="get" class="input-group w-50 mx-auto">
+            <input type="text" class="form-control" name="q" placeholder="Tìm kiếm...">
+            <button class="btn btn-primary" type="submit">🔍</button>
+        </form>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg4.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Khơi nguồn sáng tạo</h5>
+                <p>Cà phê đậm đà hương vị Việt</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg5.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Không gian thoải mái</h5>
+                <p>Thưởng thức cà phê cùng bạn bè</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg3.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Đậm chất MHK Cafe</h5>
+                <p>Luôn mang lại trải nghiệm tuyệt vời</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
 </div>

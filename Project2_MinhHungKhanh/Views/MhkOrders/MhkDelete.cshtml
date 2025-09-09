@@ -4,9 +4,11 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<div class="card shadow-sm mx-auto mt-4" style="max-width: 600px;">
+    <div class="card-header bg-danger text-white">
+        <h4 class="text-center">Bạn có chắc muốn xóa don hang nay ko?</h4>
 
-<h3>Are you sure you want to delete this?</h3>
+</div>
 <div>
     <h4>MhkOrder</h4>
     <hr />
@@ -31,9 +33,9 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
+    <form asp-action="MhkDelete">
         <input type="hidden" asp-for="MhkOrderId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <button type="submit" class="btn btn-danger">🗑️ Xác nhận xóa</button>
+        <a asp-action="HqmIndex" class="btn btn-secondary">⬅️ Quay lại</a>
     </form>
 </div>

@@ -4,14 +4,15 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>@ViewData["Title"]</h1>
 
 <h4>MhkOrder</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="MhkEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
             <input type="hidden" asp-for="MhkOrderId" />
             <div class="form-group">
                 <label asp-for="MhkUserId" class="control-label"></label>
@@ -28,14 +29,12 @@
                 <input asp-for="MhkStatus" class="form-control" />
                 <span asp-validation-for="MhkStatus" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">💾 Lưu thay đổi</button>
+                <a asp-action="MhkIndex" class="btn btn-primary">⬅️ Quay lai</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

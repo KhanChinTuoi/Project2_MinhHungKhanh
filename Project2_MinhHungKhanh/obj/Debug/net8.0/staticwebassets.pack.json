@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\Screenshot 2025-08-04 121335.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2025-08-04 121335.png"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\bg1.png",
+      "PackagePath": "staticwebassets\\images\\bg1.png"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\bg2.jpg",
+      "PackagePath": "staticwebassets\\images\\bg2.jpg"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\bg3.jpg",
+      "PackagePath": "staticwebassets\\images\\bg3.jpg"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\bg4.jpg",
+      "PackagePath": "staticwebassets\\images\\bg4.jpg"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\bg5.jpg",
+      "PackagePath": "staticwebassets\\images\\bg5.jpg"
+    },
+    {
       "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },

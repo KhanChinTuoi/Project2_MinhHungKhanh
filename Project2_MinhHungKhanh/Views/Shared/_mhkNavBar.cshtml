@@ -1,37 +1,44 @@
 ﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="mhkHome" asp-action="mhkIndex">
-            <img src="images/logo1.jpg" alt="Logo" style="height: 100px;" class="me-2">
-            <span>Project2_MinhHungKhanh</span>
+            <img src="images/logo1.jpg" alt="Logo" style="height: 60px;" class="me-2">
+
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
+            <ul class="navbar-nav me-auto d-flex flex-row gap-3">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkIndex">Trang chu</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkIndex">Trang chủ</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
+                </li>
+			
+        
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="MhkOrderDetails" asp-action="MhkIndex">Chi tiết đơn hàng</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="MhkOrders" asp-action="MhkIndex">Đơn hàng</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="mhkHome" asp-action="mhkAbout">Thong tin</a>
-                </li>
+				</li>
+			</ul>
+            <ul class="navbar-nav d-flex flex-row gap-3">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/Screenshot 2025-08-04 121335.png" alt="Logo" height="40">
+                </a>
             </ul>
         </div>
     </div>

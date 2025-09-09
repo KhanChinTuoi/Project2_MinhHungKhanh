@@ -19,16 +19,16 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkOrderDetails
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> MhkIndex()
         {
             var mhkProject2Context = _context.MhkOrderDetails.Include(m => m.MhkOrder).Include(m => m.MhkProduct);
             return View(await mhkProject2Context.ToListAsync());
         }
 
         // GET: MhkOrderDetails/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> MhkDetails(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
@@ -36,7 +36,7 @@ namespace Project2_MinhHungKhanh.Controllers
             var mhkOrderDetail = await _context.MhkOrderDetails
                 .Include(m => m.MhkOrder)
                 .Include(m => m.MhkProduct)
-                .FirstOrDefaultAsync(m => m.MhkOrderDetailId == id);
+                .FirstOrDefaultAsync(m => m.MhkOrderDetailId == mhkid);
             if (mhkOrderDetail == null)
             {
                 return NotFound();
@@ -46,7 +46,7 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkOrderDetails/Create
-        public IActionResult Create()
+        public IActionResult MhkCreate()
         {
             ViewData["MhkOrderId"] = new SelectList(_context.MhkOrders, "MhkOrderId", "MhkOrderId");
             ViewData["MhkProductId"] = new SelectList(_context.MhkProducts, "MhkProductId", "MhkProductId");
@@ -58,13 +58,13 @@ namespace Project2_MinhHungKhanh.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MhkOrderDetailId,MhkOrderId,MhkProductId,MhkQuantity,MhkUnitPrice")] MhkOrderDetail mhkOrderDetail)
+        public async Task<IActionResult> MhkCreate([Bind("MhkOrderDetailId,MhkOrderId,MhkProductId,MhkQuantity,MhkUnitPrice")] MhkOrderDetail mhkOrderDetail)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(mhkOrderDetail);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MhkIndex));
             }
             ViewData["MhkOrderId"] = new SelectList(_context.MhkOrders, "MhkOrderId", "MhkOrderId", mhkOrderDetail.MhkOrderId);
             ViewData["MhkProductId"] = new SelectList(_context.MhkProducts, "MhkProductId", "MhkProductId", mhkOrderDetail.MhkProductId);
@@ -72,14 +72,14 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkOrderDetails/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> MhkEdit(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
 
-            var mhkOrderDetail = await _context.MhkOrderDetails.FindAsync(id);
+            var mhkOrderDetail = await _context.MhkOrderDetails.FindAsync(mhkid);
             if (mhkOrderDetail == null)
             {
                 return NotFound();
@@ -94,9 +94,9 @@ namespace Project2_MinhHungKhanh.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MhkOrderDetailId,MhkOrderId,MhkProductId,MhkQuantity,MhkUnitPrice")] MhkOrderDetail mhkOrderDetail)
+        public async Task<IActionResult> MhkEdit(int mhkid, [Bind("MhkOrderDetailId,MhkOrderId,MhkProductId,MhkQuantity,MhkUnitPrice")] MhkOrderDetail mhkOrderDetail)
         {
-            if (id != mhkOrderDetail.MhkOrderDetailId)
+            if (mhkid != mhkOrderDetail.MhkOrderDetailId)
             {
                 return NotFound();
             }
@@ -119,7 +119,7 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MhkIndex));
             }
             ViewData["MhkOrderId"] = new SelectList(_context.MhkOrders, "MhkOrderId", "MhkOrderId", mhkOrderDetail.MhkOrderId);
             ViewData["MhkProductId"] = new SelectList(_context.MhkProducts, "MhkProductId", "MhkProductId", mhkOrderDetail.MhkProductId);
@@ -127,9 +127,9 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkOrderDetails/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> MhkDelete(int? mhkid)
         {
-            if (id == null)
+            if (mhkid == null)
             {
                 return NotFound();
             }
@@ -137,7 +137,7 @@ namespace Project2_MinhHungKhanh.Controllers
             var mhkOrderDetail = await _context.MhkOrderDetails
                 .Include(m => m.MhkOrder)
                 .Include(m => m.MhkProduct)
-                .FirstOrDefaultAsync(m => m.MhkOrderDetailId == id);
+                .FirstOrDefaultAsync(m => m.MhkOrderDetailId == mhkid);
             if (mhkOrderDetail == null)
             {
                 return NotFound();
@@ -147,23 +147,23 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // POST: MhkOrderDetails/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("MhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int mhkid)
         {
-            var mhkOrderDetail = await _context.MhkOrderDetails.FindAsync(id);
+            var mhkOrderDetail = await _context.MhkOrderDetails.FindAsync(mhkid);
             if (mhkOrderDetail != null)
             {
                 _context.MhkOrderDetails.Remove(mhkOrderDetail);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(MhkIndex));
         }
 
-        private bool MhkOrderDetailExists(int id)
+        private bool MhkOrderDetailExists(int mhkid)
         {
-            return _context.MhkOrderDetails.Any(e => e.MhkOrderDetailId == id);
+            return _context.MhkOrderDetails.Any(e => e.MhkOrderDetailId == mhkid);
         }
     }
 }
