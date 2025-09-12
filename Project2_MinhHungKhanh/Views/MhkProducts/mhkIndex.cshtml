@@ -1,53 +1,39 @@
 ﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkProduct>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách sản phẩm";
 }
 
-<h1>Index</h1>
+<h1>Danh sách sản phẩm</h1>
 
 <p>
-    <a asp-action="mhkCreate">Create New</a>
+    <a asp-action="MhkCreate">➕ Thêm sản phẩm</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkCategory)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.MhkName)</th>
+            <th>@Html.DisplayNameFor(model => model.MhkPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.MhkDescription)</th>
+            <th>Loại sản phẩm</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkCategory.MhkCategoryId)
-            </td>
-            <td>
-                <a asp-action="mhkEdit" asp-route-mhkid="@item.MhkProductId">Sửa</a> |
-                <a asp-action="mhkDetails" asp-route-mhkid="@item.MhkProductId">Chi tiết</a> |
-                <a asp-action="mhkDelete" asp-route-mhkid="@item.MhkProductId">Xóa</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MhkName</td>
+                <td>@item.MhkPrice</td>
+                <td>@item.MhkDescription</td>
+                <td>@item.MhkCategory.MhkCategoryName</td>
+                <td>
+                    <a asp-action="MhkEdit" asp-route-id="@item.MhkProductId">✏️ Sửa</a> |
+                    <a asp-action="MhkDetails" asp-route-id="@item.MhkProductId">🔍 Chi tiết</a> |
+                    <a asp-action="MhkDelete" asp-route-id="@item.MhkProductId">🗑️ Xóa</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

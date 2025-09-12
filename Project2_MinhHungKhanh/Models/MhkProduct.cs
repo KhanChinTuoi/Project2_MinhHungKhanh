@@ -15,7 +15,7 @@ public partial class MhkProduct
 
     public string? MhkDescription { get; set; }
 
-    public virtual MhkCategory MhkCategory { get; set; } = null!;
+    public virtual MhkCategory? MhkCategory { get; set; }
 
     public virtual ICollection<MhkOrderDetail> MhkOrderDetails { get; set; } = new List<MhkOrderDetail>();
 }

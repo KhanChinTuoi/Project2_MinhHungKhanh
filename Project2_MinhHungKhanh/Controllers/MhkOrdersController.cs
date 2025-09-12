@@ -19,80 +19,80 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkOrders
-        public async Task<IActionResult> mhkIndex()
+        public async Task<IActionResult> MhkIndex()
         {
-            var mhkProject2Context = _context.MhkOrders.Include(m => m.MhkUser);
-            return View(await mhkProject2Context.ToListAsync());
+            var MhkProject2Context = _context.MhkOrders.Include(m => m.MhkUser);
+            return View(await MhkProject2Context.ToListAsync());
         }
 
-        // GET: MhkOrders/mhkDetails/5
-        public async Task<IActionResult> Details(int? mhkid)
+        // GET: MhkOrders/MhkDetails/5
+        public async Task<IActionResult> Details(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkOrder = await _context.MhkOrders
+            var MhkOrder = await _context.MhkOrders
                 .Include(m => m.MhkUser)
-                .FirstOrDefaultAsync(m => m.MhkOrderId == mhkid);
-            if (mhkOrder == null)
+                .FirstOrDefaultAsync(m => m.MhkOrderId == id);
+            if (MhkOrder == null)
             {
                 return NotFound();
             }
 
-            return View(mhkOrder);
+            return View(MhkOrder);
         }
 
         // GET: MhkOrders/Create
-        public IActionResult mhkCreate()
+        public IActionResult MhkCreate()
         {
             ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId");
             return View();
         }
 
-        // POST: MhkOrders/mhkCreate
+        // POST: MhkOrders/MhkCreate
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkCreate([Bind("MhkOrderId,MhkUserId,MhkOrderDate,MhkStatus")] MhkOrder mhkOrder)
+        public async Task<IActionResult> MhkCreate([Bind("MhkOrderId,MhkUserId,MhkOrderDate,MhkStatus")] MhkOrder MhkOrder)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mhkOrder);
+                _context.Add(MhkOrder);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(MhkIndex));
             }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkOrder.MhkUserId);
-            return View(mhkOrder);
+            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", MhkOrder.MhkUserId);
+            return View(MhkOrder);
         }
 
         // GET: MhkOrders/Edit/5
-        public async Task<IActionResult> Edit(int? mhkid)
+        public async Task<IActionResult> MhkEdit(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkOrder = await _context.MhkOrders.FindAsync(mhkid);
-            if (mhkOrder == null)
+            var MhkOrder = await _context.MhkOrders.FindAsync(id);
+            if (MhkOrder == null)
             {
                 return NotFound();
             }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkOrder.MhkUserId);
-            return View(mhkOrder);
+            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", MhkOrder.MhkUserId);
+            return View(MhkOrder);
         }
 
-        // POST: MhkOrders/mhkEdit/5
+        // POST: MhkOrders/MhkEdit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkEdit(int mhkid, [Bind("MhkOrderId,MhkUserId,MhkOrderDate,MhkStatus")] MhkOrder mhkOrder)
+        public async Task<IActionResult> MhkEdit(int? id, [Bind("MhkOrderId,MhkUserId,MhkOrderDate,MhkStatus")] MhkOrder MhkOrder)
         {
-            if (mhkid != mhkOrder.MhkOrderId)
+            if (id != MhkOrder.MhkOrderId)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace Project2_MinhHungKhanh.Controllers
             {
                 try
                 {
-                    _context.Update(mhkOrder);
+                    _context.Update(MhkOrder);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MhkOrderExists(mhkOrder.MhkOrderId))
+                    if (!MhkOrderExists(MhkOrder.MhkOrderId))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(mhkIndex));
+                return RedirectToAction(nameof(MhkIndex));
             }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkOrder.MhkUserId);
-            return View(mhkOrder);
+            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", MhkOrder.MhkUserId);
+            return View(MhkOrder);
         }
 
-        // GET: MhkOrders/mhkDelete/5
-        public async Task<IActionResult> mhkDelete(int? mhkid)
+        // GET: MhkOrders/MhkDelete/5
+        public async Task<IActionResult> MhkDelete(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkOrder = await _context.MhkOrders
+            var MhkOrder = await _context.MhkOrders
                 .Include(m => m.MhkUser)
-                .FirstOrDefaultAsync(m => m.MhkOrderId == mhkid);
-            if (mhkOrder == null)
+                .FirstOrDefaultAsync(m => m.MhkOrderId == id);
+            if (MhkOrder == null)
             {
                 return NotFound();
             }
 
-            return View(mhkOrder);
+            return View(MhkOrder);
         }
 
-        // POST: MhkOrders/mhkDelete/5
-        [HttpPost, ActionName("mhkDelete")]
+        // POST: MhkOrders/MhkDelete/5
+        [HttpPost, ActionName("MhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int mhkid)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-            var mhkOrder = await _context.MhkOrders.FindAsync(mhkid);
-            if (mhkOrder != null)
+            var MhkOrder = await _context.MhkOrders.FindAsync(id);
+            if (MhkOrder != null)
             {
-                _context.MhkOrders.Remove(mhkOrder);
+                _context.MhkOrders.Remove(MhkOrder);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(mhkIndex));
+            return RedirectToAction(nameof(MhkIndex));
         }
 
-        private bool MhkOrderExists(int mhkid)
+        private bool MhkOrderExists(int? id)
         {
-            return _context.MhkOrders.Any(e => e.MhkOrderId == mhkid);
+            return _context.MhkOrders.Any(e => e.MhkOrderId == id);
         }
     }
 }

@@ -1,0 +1,40 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkAdmin
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MhkAdmin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MhkCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MhkUserName" class="control-label"></label>
+                <input asp-for="MhkUserName" class="form-control" />
+                <span asp-validation-for="MhkUserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MhkPassword" class="control-label"></label>
+                <input asp-for="MhkPassword" class="form-control" />
+                <span asp-validation-for="MhkPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MhkFullName" class="control-label"></label>
+                <input asp-for="MhkFullName" class="form-control" />
+                <span asp-validation-for="MhkFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="MhkIndex">Quay về danh sách</a>
+</div>
+

@@ -15,7 +15,7 @@ public partial class MhkOrderDetail
 
     public decimal MhkUnitPrice { get; set; }
 
-    public virtual MhkOrder MhkOrder { get; set; } = null!;
+    public virtual MhkOrder? MhkOrder { get; set; } 
 
-    public virtual MhkProduct MhkProduct { get; set; } = null!;
+    public virtual MhkProduct? MhkProduct { get; set; } 
 }

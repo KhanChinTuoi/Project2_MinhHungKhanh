@@ -1,42 +1,26 @@
 ﻿@model Project2_MinhHungKhanh.Models.MhkProduct
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Chi tiết sản phẩm";
 }
 
-<h1>Details</h1>
+<h1>Chi tiết sản phẩm</h1>
 
 <div>
-    <h4>MhkProduct</h4>
+    <h4>@Model.MhkName</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkPrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkPrice)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkDescription)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkDescription)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MhkCategory)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MhkCategory.MhkCategoryId)
-        </dd>
+        <dt class="col-sm-3">Loại sản phẩm</dt>
+        <dd class="col-sm-9">@Model.MhkCategory.MhkCategoryName</dd>
+
+        <dt class="col-sm-3">Giá</dt>
+        <dd class="col-sm-9">@Model.MhkPrice</dd>
+
+        <dt class="col-sm-3">Mô tả</dt>
+        <dd class="col-sm-9">@Model.MhkDescription</dd>
     </dl>
 </div>
 <div>
-    <a asp-action="mhkEdit" asp-route-mhkid="@Model?.MhkProductId">Sửa</a> |
-    <a asp-action="mhkIndex">Quay về danh sách</a>
+    <a asp-action="MhkEdit" asp-route-id="@Model.MhkProductId" class="btn btn-warning">✏️ Sửa</a> |
+    <a asp-action="MhkIndex" class="btn btn-secondary">⬅️ Quay lại</a>
 </div>

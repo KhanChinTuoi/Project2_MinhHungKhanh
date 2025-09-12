@@ -19,31 +19,31 @@ namespace Project2_MinhHungKhanh.Controllers
         }
 
         // GET: MhkCategories
-        public async Task<IActionResult> mhkIndex()
+        public async Task<IActionResult> MhkIndex()
         {
             return View(await _context.MhkCategories.ToListAsync());
         }
 
-        // GET: MhkCategories/mhkDetails/5
-        public async Task<IActionResult> mhkDetails(int? mhkid)
+        // GET: MhkCategories/MhkDetails/5
+        public async Task<IActionResult> MhkDetails(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkCategory = await _context.MhkCategories
-                .FirstOrDefaultAsync(m => m.MhkCategoryId == mhkid);
-            if (mhkCategory == null)
+            var MhkCategory = await _context.MhkCategories
+                .FirstOrDefaultAsync(m => m.MhkCategoryId == id);
+            if (MhkCategory == null)
             {
                 return NotFound();
             }
 
-            return View(mhkCategory);
+            return View(MhkCategory);
         }
 
-        // GET: MhkCategories/mhkCreate
-        public IActionResult mhkCreate()
+        // GET: MhkCategories/MhkCreate
+        public IActionResult MhkCreate()
         {
             return View();
         }
@@ -53,41 +53,41 @@ namespace Project2_MinhHungKhanh.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkCreate([Bind("MhkCategoryId,MhkCategoryName")] MhkCategory mhkCategory)
+        public async Task<IActionResult> MhkCreate([Bind("MhkCategoryId,MhkCategoryName")] MhkCategory MhkCategory)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(mhkCategory);
+                _context.Add(MhkCategory);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(mhkIndex));
+                return RedirectToAction(nameof(MhkIndex));
             }
-            return View(mhkCategory);
+            return View(MhkCategory);
         }
 
-        // GET: MhkCategories/mhkEdit/5
-        public async Task<IActionResult> mhkEdit(int? mhkid)
+        // GET: MhkCategories/MhkEdit/5
+        public async Task<IActionResult> MhkEdit(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkCategory = await _context.MhkCategories.FindAsync(mhkid);
-            if (mhkCategory == null)
+            var MhkCategory = await _context.MhkCategories.FindAsync(id);
+            if (MhkCategory == null)
             {
                 return NotFound();
             }
-            return View(mhkCategory);
+            return View(MhkCategory);
         }
 
-        // POST: MhkCategories/mhkEdit/5
+        // POST: MhkCategories/MhkEdit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int mhkid, [Bind("MhkCategoryId,MhkCategoryName")] MhkCategory mhkCategory)
+        public async Task<IActionResult> MhkEdit(int? id, [Bind("MhkCategoryId,MhkCategoryName")] MhkCategory MhkCategory)
         {
-            if (mhkid != mhkCategory.MhkCategoryId)
+            if (id != MhkCategory.MhkCategoryId)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace Project2_MinhHungKhanh.Controllers
             {
                 try
                 {
-                    _context.Update(mhkCategory);
+                    _context.Update(MhkCategory);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MhkCategoryExists(mhkCategory.MhkCategoryId))
+                    if (!MhkCategoryExists(MhkCategory.MhkCategoryId))
                     {
                         return NotFound();
                     }
@@ -110,47 +110,47 @@ namespace Project2_MinhHungKhanh.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(mhkIndex));
+                return RedirectToAction(nameof(MhkIndex));
             }
-            return View(mhkCategory);
+            return View(MhkCategory);
         }
 
-        // GET: MhkCategories/mhkDelete/5
-        public async Task<IActionResult> mhkDelete(int? mhkid)
+        // GET: MhkCategories/MhkDelete/5
+        public async Task<IActionResult> MhkDelete(int? id)
         {
-            if (mhkid == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var mhkCategory = await _context.MhkCategories
-                .FirstOrDefaultAsync(m => m.MhkCategoryId == mhkid);
-            if (mhkCategory == null)
+            var MhkCategory = await _context.MhkCategories
+                .FirstOrDefaultAsync(m => m.MhkCategoryId == id);
+            if (MhkCategory == null)
             {
                 return NotFound();
             }
 
-            return View(mhkCategory);
+            return View(MhkCategory);
         }
 
-        // POST: MhkCategories/mhkDelete/5
-        [HttpPost, ActionName("mhkDelete")]
+        // POST: MhkCategories/MhkDelete/5
+        [HttpPost, ActionName("MhkDelete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkDeleteConfirmed(int mhkid)
+        public async Task<IActionResult> MhkDeleteConfirmed(int? id)
         {
-            var mhkCategory = await _context.MhkCategories.FindAsync(mhkid);
-            if (mhkCategory != null)
+            var MhkCategory = await _context.MhkCategories.FindAsync(id);
+            if (MhkCategory != null)
             {
-                _context.MhkCategories.Remove(mhkCategory);
+                _context.MhkCategories.Remove(MhkCategory);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(mhkIndex));
+            return RedirectToAction(nameof(MhkIndex));
         }
 
-        private bool MhkCategoryExists(int mhkid)
+        private bool MhkCategoryExists(int? id)
         {
-            return _context.MhkCategories.Any(e => e.MhkCategoryId == mhkid);
+            return _context.MhkCategories.Any(e => e.MhkCategoryId == id);
         }
     }
 }

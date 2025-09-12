@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.MhkUser.MhkUserId)
             </td>
             <td>
-                <a asp-action="mhkEdit" asp-route-mhkid="@item.MhkOrderId">Sửa</a> |
-                <a asp-action="mhkDetails" asp-route-mhkid="@item.MhkOrderId">Chi tiết</a> |
-                <a asp-action="mhkDelete" asp-route-mhkid="@item.MhkOrderId">Xóa</a>
+                <a asp-action="MhkEdit" asp-route-id="@item.MhkOrderId">Sửa</a> |
+                <a asp-action="MhkDetails" asp-route-id="@item.MhkOrderId">Chi tiết</a> |
+                <a asp-action="MhkDelete" asp-route-id="@item.MhkOrderId">Xóa</a>
             </td>
         </tr>
 }

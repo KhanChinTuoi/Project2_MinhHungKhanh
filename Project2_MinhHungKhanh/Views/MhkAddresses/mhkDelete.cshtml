@@ -1,7 +1,7 @@
 ﻿@model Project2_MinhHungKhanh.Models.MhkAddress
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "MhkDelete";
 }
 
 <h1>Delete</h1>
@@ -25,9 +25,9 @@
         </dd>
     </dl>
     
-    <form asp-action="mhkDelete">
+    <form asp-action="MhkDelete">
         <input type="hidden" asp-for="MhkAddressId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="mhkIndex">Quay về danh sách</a>
+        <a asp-action="MhkIndex">Quay về danh sách</a>
     </form>
 </div>

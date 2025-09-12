@@ -1,34 +1,33 @@
 ﻿@model Project2_MinhHungKhanh.Models.MhkAddress
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Tạo mới địa chỉ";
 }
 
-<h1>Create</h1>
+<h1>Tạo mới địa chỉ</h1>
 
-<h4>MhkAddress</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="mhkCreate">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-md-6">
+        <form asp-action="MhkCreate" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="MhkUserId" class="control-label"></label>
-                <select asp-for="MhkUserId" class ="form-control" asp-items="ViewBag.MhkUserId"></select>
+                <label asp-for="MhkUserId" class="control-label">Mã người dùng</label>
+                <input asp-for="MhkUserId" class="form-control" />
+                <span asp-validation-for="MhkUserId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MhkLine1" class="control-label"></label>
+
+            <div class="form-group mt-2">
+                <label asp-for="MhkLine1" class="control-label">Địa chỉ</label>
                 <input asp-for="MhkLine1" class="form-control" />
                 <span asp-validation-for="MhkLine1" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                <a asp-action="MhkIndex" class="btn btn-secondary">Quay về danh sách</a>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="mhkIndex">Quay về danh sách</a>
-</div>
-

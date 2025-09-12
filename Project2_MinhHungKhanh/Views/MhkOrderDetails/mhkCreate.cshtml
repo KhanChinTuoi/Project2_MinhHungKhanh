@@ -1,43 +1,31 @@
 ﻿@model Project2_MinhHungKhanh.Models.MhkOrderDetail
 
-@{
-    ViewData["Title"] = "Create";
-}
+<h1>Tạo mới</h1>
 
-<h1>Create</h1>
+<form asp-action="MhkCreate" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
 
-<h4>MhkOrderDetail</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="mhkCreate">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="MhkOrderId" class="control-label"></label>
-                <select asp-for="MhkOrderId" class ="form-control" asp-items="ViewBag.MhkOrderId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="MhkProductId" class="control-label"></label>
-                <select asp-for="MhkProductId" class ="form-control" asp-items="ViewBag.MhkProductId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="MhkQuantity" class="control-label"></label>
-                <input asp-for="MhkQuantity" class="form-control" />
-                <span asp-validation-for="MhkQuantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MhkUnitPrice" class="control-label"></label>
-                <input asp-for="MhkUnitPrice" class="form-control" />
-                <span asp-validation-for="MhkUnitPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="form-group">
+        <label asp-for="MhkOrderId"></label>
+        <select asp-for="MhkOrderId" class="form-control" asp-items="ViewBag.MhkOrderId"></select>
     </div>
-</div>
 
-<div>
-    <a asp-action="mhkIndex"> Quay về danh sách</a>
-</div>
+    <div class="form-group">
+        <label asp-for="MhkProductId"></label>
+        <select asp-for="MhkProductId" class="form-control" asp-items="ViewBag.MhkProductId"></select>
+    </div>
 
+    <div class="form-group">
+        <label asp-for="MhkQuantity"></label>
+        <input asp-for="MhkQuantity" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MhkUnitPrice"></label>
+        <input asp-for="MhkUnitPrice" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">💾 Lưu</button>
+    <a asp-action="MhkIndex" class="btn btn-secondary">⬅ Quay lại</a>
+</form>

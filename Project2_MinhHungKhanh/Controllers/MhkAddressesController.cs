@@ -1,163 +1,132 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project2_MinhHungKhanh.Models;
 
-namespace Project2_MinhHungKhanh.Controllers
+public class MhkAddressesController : Controller
 {
-    public class MhkAddressesController : Controller
+    private readonly MhkProject2Context _context;
+
+    public MhkAddressesController(MhkProject2Context context)
     {
-        private readonly MhkProject2Context _context;
+        _context = context;
+    }
 
-        public MhkAddressesController(MhkProject2Context context)
+    // GET: MhkAddresses
+    public async Task<IActionResult> MhkIndex()
+    {
+        var addresses = await _context.MhkAddresses
+            .Include(a => a.MhkUser)
+            .ToListAsync();
+        return View(addresses);
+    }
+
+    // GET: MhkAddresses/MhkDetails/5
+    public async Task<IActionResult> MhkDetails(int? id)
+    {
+        if (id == null) return NotFound();
+
+        var MhkAddress = await _context.MhkAddresses
+            .Include(a => a.MhkUser)
+            .FirstOrDefaultAsync(m => m.MhkAddressId == id);
+
+        if (MhkAddress == null) return NotFound();
+
+        return View(MhkAddress);
+    }
+
+    // GET: MhkAddresses/MhkCreate
+    public IActionResult MhkCreate()
+    {
+        return View();
+    }
+
+    // POST: MhkAddresses/MhkCreate
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> MhkCreate([Bind("MhkUserId,MhkLine1")] MhkAddress MhkAddress)
+    {
+        if (ModelState.IsValid)
         {
-            _context = context;
-        }
-
-        // GET: MhkAddresses
-        public async Task<IActionResult> mhkIndex()
-        {
-            var mhkProject2Context = _context.MhkAddresses.Include(m => m.MhkUser);
-            return View(await mhkProject2Context.ToListAsync());
-        }
-
-        // GET: MhkAddresses/Details/5
-        public async Task<IActionResult> mhkDetails(int? mhkid)
-        {
-            if (mhkid == null)
-            {
-                return NotFound();
-            }
-
-            var mhkAddress = await _context.MhkAddresses
-                .Include(m => m.MhkUser)
-                .FirstOrDefaultAsync(m => m.MhkAddressId == mhkid);
-            if (mhkAddress == null)
-            {
-                return NotFound();
-            }
-
-            return View(mhkAddress);
-        }
-
-        // GET: MhkAddresses/Create
-        public IActionResult mhkCreate()
-        {
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId");
-            return View();
-        }
-
-        // POST: MhkAddresses/mhkCreate
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkCreate([Bind("MhkAddressId,MhkUserId,MhkLine1")] MhkAddress mhkAddress)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(mhkAddress);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(mhkIndex));
-            }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkAddress.MhkUserId);
-            return View(mhkAddress);
-        }
-
-        // GET: MhkAddresses/mhkEdit/5
-        public async Task<IActionResult> mhkEdit(int? mhkid)
-        {
-            if (mhkid == null)
-            {
-                return NotFound();
-            }
-
-            var mhkAddress = await _context.MhkAddresses.FindAsync(mhkid);
-            if (mhkAddress == null)
-            {
-                return NotFound();
-            }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkAddress.MhkUserId);
-            return View(mhkAddress);
-        }
-
-        // POST: MhkAddresses/mhkEdit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkEdit(int mhkid, [Bind("MhkAddressId,MhkUserId,MhkLine1")] MhkAddress mhkAddress)
-        {
-            if (mhkid != mhkAddress.MhkAddressId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(mhkAddress);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!MhkAddressExists(mhkAddress.MhkAddressId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(mhkIndex));
-            }
-            ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", mhkAddress.MhkUserId);
-            return View(mhkAddress);
-        }
-
-        // GET: MhkAddresses/mhkDelete/5
-        public async Task<IActionResult> mhkDelete(int? mhkid)
-        {
-            if (mhkid == null)
-            {
-                return NotFound();
-            }
-
-            var mhkAddress = await _context.MhkAddresses
-                .Include(m => m.MhkUser)
-                .FirstOrDefaultAsync(m => m.MhkAddressId == mhkid);
-            if (mhkAddress == null)
-            {
-                return NotFound();
-            }
-
-            return View(mhkAddress);
-        }
-
-        // POST: MhkAddresses/mhkDelete/5
-        [HttpPost, ActionName("mhkDelete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> mhkDeleteConfirmed(int mhkid)
-        {
-            var mhkAddress = await _context.MhkAddresses.FindAsync(mhkid);
-            if (mhkAddress != null)
-            {
-                _context.MhkAddresses.Remove(mhkAddress);
-            }
-
+            _context.Add(MhkAddress);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(mhkIndex));
+            return RedirectToAction(nameof(MhkIndex)); // ✅ sẽ quay về Index
         }
 
-        private bool MhkAddressExists(int mhkid)
+        return View(MhkAddress);
+    }
+
+
+
+
+
+    // GET: MhkAddresses/MhkEdit/5
+    public async Task<IActionResult> MhkEdit(int? id)
+    {
+        if (id == null) return NotFound();
+
+        var MhkAddress = await _context.MhkAddresses.FindAsync(id);
+        if (MhkAddress == null) return NotFound();
+
+        ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", MhkAddress.MhkUserId);
+        return View(MhkAddress);
+    }
+
+    // POST: MhkAddresses/MhkEdit/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> MhkEdit(int? id, [Bind("MhkAddressId,MhkUserId,MhkLine1")] MhkAddress MhkAddress)
+    {
+        if (id != MhkAddress.MhkAddressId) return NotFound();
+
+        if (ModelState.IsValid)
         {
-            return _context.MhkAddresses.Any(e => e.MhkAddressId == mhkid);
+            try
+            {
+                _context.Update(MhkAddress);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MhkAddressExists(MhkAddress.MhkAddressId)) return NotFound();
+                else throw;
+            }
+            return RedirectToAction(nameof(MhkIndex));
         }
+        ViewData["MhkUserId"] = new SelectList(_context.MhkUsers, "MhkUserId", "MhkUserId", MhkAddress.MhkUserId);
+        return View(MhkAddress);
+    }
+
+    // GET: MhkAddresses/MhkDelete/5
+    public async Task<IActionResult> MhkDelete(int? id)
+    {
+        if (id == null) return NotFound();
+
+        var MhkAddress = await _context.MhkAddresses
+            .Include(a => a.MhkUser)
+            .FirstOrDefaultAsync(m => m.MhkAddressId == id);
+
+        if (MhkAddress == null) return NotFound();
+
+        return View(MhkAddress);
+    }
+
+    // POST: MhkAddresses/MhkDelete/5
+    [HttpPost, ActionName("MhkDelete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(int? id)
+    {
+        var MhkAddress = await _context.MhkAddresses.FindAsync(id);
+        if (MhkAddress != null)
+        {
+            _context.MhkAddresses.Remove(MhkAddress);
+            await _context.SaveChangesAsync();
+        }
+        return RedirectToAction(nameof(MhkIndex));
+    }
+
+    private bool MhkAddressExists(int id)
+    {
+        return _context.MhkAddresses.Any(e => e.MhkAddressId == id);
     }
 }

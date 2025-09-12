@@ -1,0 +1,42 @@
+﻿@model Project2_MinhHungKhanh.Models.MhkAdmin
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MhkAdmin</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkUserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkUserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkPassword)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkPassword)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkFullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkFullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MhkRole)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MhkRole)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="MhkEdit" asp-route-id="@Model?.MhkAdminId">Sửa</a> |
+    <a asp-action="MhkIndex">Quay về danh sách</a>
+</div>

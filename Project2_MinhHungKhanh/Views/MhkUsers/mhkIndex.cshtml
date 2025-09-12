@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="mhkCreate">Create New</a>
+    <a asp-action="MhkCreate">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.MhkEmail)
             </td>
             <td>
-                <a asp-action="mhkEdit" asp-route-mhkid="@item.MhkUserId">Sửa</a> |
-                <a asp-action="mhkDetails" asp-route-mhkid="@item.MhkUserId">Chi tiết</a> |
-                <a asp-action="mhkDelete" asp-route-mhkid="@item.MhkUserId">Xóa</a>
+                <a asp-action="MhkEdit" asp-route-id="@item.MhkUserId">Sửa</a> |
+                <a asp-action="MhkDetails" asp-route-id="@item.MhkUserId">Chi tiết</a> |
+                <a asp-action="MhkDelete" asp-route-id="@item.MhkUserId">Xóa</a>
             </td>
         </tr>
 }
