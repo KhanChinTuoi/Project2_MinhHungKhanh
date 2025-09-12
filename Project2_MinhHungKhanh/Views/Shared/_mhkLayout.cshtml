@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,7 +21,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkHome" asp-action="MhkIndex">Trang chu</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkHome" asp-action="MhkIndex">Trang chủ</a>
                         </li>
 
                         <li class="nav-item">
@@ -28,23 +29,23 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkAddresses" asp-action="MhkIndex">Dia chi</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkAddresses" asp-action="MhkIndex">Địa chỉ</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkCategories" asp-action="MhkIndex">Loai san pham</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkCategories" asp-action="MhkIndex">Loại sản phẩm</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkOrderDetails" asp-action="MhkIndex">Chi tiet don hang</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkOrderDetails" asp-action="MhkIndex">Chi tiết đơn hàng</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkProducts" asp-action="MhkIndex">San pham</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkProducts" asp-action="MhkIndex">Sản phẩm</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkUsers" asp-action="MhkIndex">Thong tin nguoi dung</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MhkUsers" asp-action="MhkIndex">Thông tin người dùng</a>
                         </li>
 
                     </ul>
@@ -53,16 +54,12 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Project2_MinhHungKhanh - <a asp-area="" asp-controller="MhkHome" asp-action="MhkAbout">Thong tin sinh vien</a>
-        </div>
-    </footer>
+    @RenderSection("ExtraContent", required: false)
+
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

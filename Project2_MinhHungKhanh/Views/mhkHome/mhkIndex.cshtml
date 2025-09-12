@@ -1,8 +1,151 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿﻿@{
+ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="container my-3">
+        <form asp-controller="MhkProducts" asp-action="MhkIndex" method="get" class="input-group w-50 mx-auto">
+            <input type="text" class="form-control" name="q" placeholder="Tìm kiếm...">
+            <button class="btn btn-primary" type="submit">🔍</button>
+        </form>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg4.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Khơi nguồn sáng tạo</h5>
+                <p>Cà phê đậm đà hương vị Việt</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg5.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Không gian thoải mái</h5>
+                <p>Thưởng thức cà phê cùng bạn bè</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <h1 class="text-white">Chào mừng đến với MHK Cafe</h1>
+            </div>
+            <img src="~/images/bg3.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Đậm chất MHK Cafe</h5>
+                <p>Luôn mang lại trải nghiệm tuyệt vời</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
 </div>
+
+@section ExtraContent {
+    <!-- Các sản phẩm -->
+    <section class="product-sale my-5">
+        <div class="container">
+            <h3 class="text-white p-3" style="background-color: #212529;">CÁC SẢN PHẨM NỔI BẬT</h3>
+            <div class="row text-center">
+                <!-- 1 sản phẩm -->
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <img src="~/images/cafe1_clean.png" class="card-img-top" alt="Cà phê">
+                        <div class="card-body">
+                            <h6 class="card-title">Espresso</h6>
+                            <p class="price text-danger fw-bold">35.000đ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 sản phẩm -->
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <img src="~/images/cafe2_clean.png" class="card-img-top" alt="Cà phê 2">
+                        <div class="card-body">
+                            <h6 class="card-title">Capuchino</h6>
+                            <p class="price text-danger fw-bold">40.000đ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 sản phẩm -->
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <img src="~/images/cafe3_clean.png" class="card-img-top" alt="Cà phê 3">
+                        <div class="card-body">
+                            <h6 class="card-title">Latte</h6>
+                            <p class="price text-danger fw-bold">60.000đ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 sản phẩm -->
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <img src="~/images/cafe4_clean.png" class="card-img-top" alt="Cà phê 4">
+                        <div class="card-body">
+                            <h6 class="card-title">Americano</h6>
+                            <p class="price text-danger fw-bold">45.000đ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-4 pb-2 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="mb-4">
+                    <img src="~/images/logo1.jpg" alt="MHK Cafe" style="height: 100px;">
+                </div>
+
+                <div class="col-md-4">
+                    <h5>MHK Cafe</h5>
+                    <p>Đem đến cho bạn hương vị cà phê đậm chất Việt.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Liên kết</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Trang chủ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Thông tin</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Đơn hàng</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Liên hệ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Tin tức</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <p>Email: mhkcafe69@gmail.com</p>
+                    <p>Hotline: 084 640 9694</p>
+                    <p>Giờ mở cửa: 24/24 =P</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">© 2025 MHK Cafe | Thiết kế bởi Minh, Hưng, Khánh</p>
+            </div>
+        </div>
+    </footer>
+}
