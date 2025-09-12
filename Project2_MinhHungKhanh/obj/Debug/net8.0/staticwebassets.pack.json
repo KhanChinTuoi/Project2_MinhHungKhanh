@@ -37,6 +37,22 @@
       "PackagePath": "staticwebassets\\images\\bg5.jpg"
     },
     {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe1_clean.png",
+      "PackagePath": "staticwebassets\\images\\cafe1_clean.png"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe2_clean.png",
+      "PackagePath": "staticwebassets\\images\\cafe2_clean.png"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe3_clean.png",
+      "PackagePath": "staticwebassets\\images\\cafe3_clean.png"
+    },
+    {
+      "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe4_clean.png",
+      "PackagePath": "staticwebassets\\images\\cafe4_clean.png"
+    },
+    {
       "Id": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },

@@ -1,0 +1,4 @@
+C:\project2\Project2_MinhHungKhanh\Project2_MinhHungKhanh\wwwroot\images\cafe1.png
+C:\project2\Project2_MinhHungKhanh\Project2_MinhHungKhanh\wwwroot\images\cafe2.png
+C:\project2\Project2_MinhHungKhanh\Project2_MinhHungKhanh\wwwroot\images\cafe3.png
+C:\project2\Project2_MinhHungKhanh\Project2_MinhHungKhanh\wwwroot\images\cafe4.png

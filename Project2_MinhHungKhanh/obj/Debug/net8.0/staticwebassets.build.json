@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xXPWL6Yd/jz+RDgrSQa6uREkwsfH0y8voEgR3OYdA64=",
+  "Hash": "3A+/HzASeQp5TlnvHjuC3Fw8RMuDMnO9pr7NaaXVaFM=",
   "Source": "Project2_MinhHungKhanh",
   "BasePath": "_content/Project2_MinhHungKhanh",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fn6qhly4f8",
-      "Integrity": "K+kN6/gW4ycIzrTJWdiegd9IVsBjJct9VVTDCVcKqeg=",
+      "Fingerprint": "y50by1oofg",
+      "Integrity": "aqTnf22fK+3nW7KBy5PKvP4gdBkzSSGBvYEfDZN6MqU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -204,6 +204,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bg5.jpg"
+    },
+    {
+      "Identity": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe1_clean.png",
+      "SourceId": "Project2_MinhHungKhanh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\",
+      "BasePath": "_content/Project2_MinhHungKhanh",
+      "RelativePath": "images/cafe1_clean#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dj0zadq0kh",
+      "Integrity": "h9Rs43CGvCith+gRAH2y83GQERIVqiBu1nRA3sRM0b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cafe1_clean.png"
+    },
+    {
+      "Identity": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe2_clean.png",
+      "SourceId": "Project2_MinhHungKhanh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\",
+      "BasePath": "_content/Project2_MinhHungKhanh",
+      "RelativePath": "images/cafe2_clean#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8bv211y6lc",
+      "Integrity": "/A8fw0bns3i1UhLLwVmK2yaDe10SE3eH0k0azAbxazc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cafe2_clean.png"
+    },
+    {
+      "Identity": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe3_clean.png",
+      "SourceId": "Project2_MinhHungKhanh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\",
+      "BasePath": "_content/Project2_MinhHungKhanh",
+      "RelativePath": "images/cafe3_clean#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ioditdaadb",
+      "Integrity": "wsacsjCBiiYHSuKE82L7H/qD/BTpnK3f+NTH9CC6IG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cafe3_clean.png"
+    },
+    {
+      "Identity": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe4_clean.png",
+      "SourceId": "Project2_MinhHungKhanh",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\",
+      "BasePath": "_content/Project2_MinhHungKhanh",
+      "RelativePath": "images/cafe4_clean#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qzi7hgqrnt",
+      "Integrity": "GlNJPQkhHbKeRGIExFYqhkTDgR1YhbGpVmEoRpKvezQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cafe4_clean.png"
     },
     {
       "Identity": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\logo.png",
@@ -1499,7 +1583,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "849"
+          "Value": "1816"
         },
         {
           "Name": "Content-Type",
@@ -1507,11 +1591,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"K+kN6/gW4ycIzrTJWdiegd9IVsBjJct9VVTDCVcKqeg=\""
+          "Value": "\"aqTnf22fK+3nW7KBy5PKvP4gdBkzSSGBvYEfDZN6MqU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:17:37 GMT"
+          "Value": "Fri, 12 Sep 2025 07:46:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1521,12 +1605,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-K+kN6/gW4ycIzrTJWdiegd9IVsBjJct9VVTDCVcKqeg="
+          "Value": "sha256-aqTnf22fK+3nW7KBy5PKvP4gdBkzSSGBvYEfDZN6MqU="
         }
       ]
     },
     {
-      "Route": "css/site.fn6qhly4f8.css",
+      "Route": "css/site.y50by1oofg.css",
       "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1536,7 +1620,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "849"
+          "Value": "1816"
         },
         {
           "Name": "Content-Type",
@@ -1544,11 +1628,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"K+kN6/gW4ycIzrTJWdiegd9IVsBjJct9VVTDCVcKqeg=\""
+          "Value": "\"aqTnf22fK+3nW7KBy5PKvP4gdBkzSSGBvYEfDZN6MqU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:17:37 GMT"
+          "Value": "Fri, 12 Sep 2025 07:46:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1558,7 +1642,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fn6qhly4f8"
+          "Value": "y50by1oofg"
         },
         {
           "Name": "label",
@@ -1566,7 +1650,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-K+kN6/gW4ycIzrTJWdiegd9IVsBjJct9VVTDCVcKqeg="
+          "Value": "sha256-aqTnf22fK+3nW7KBy5PKvP4gdBkzSSGBvYEfDZN6MqU="
         }
       ]
     },
@@ -2059,6 +2143,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-h+xdlPB/zjESF1Ucj+/MXLt0kypKtQp9qUZNpZgCv0U="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe1_clean.dj0zadq0kh.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe1_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h9Rs43CGvCith+gRAH2y83GQERIVqiBu1nRA3sRM0b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dj0zadq0kh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cafe1_clean.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9Rs43CGvCith+gRAH2y83GQERIVqiBu1nRA3sRM0b0="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe1_clean.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe1_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h9Rs43CGvCith+gRAH2y83GQERIVqiBu1nRA3sRM0b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h9Rs43CGvCith+gRAH2y83GQERIVqiBu1nRA3sRM0b0="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe2_clean.8bv211y6lc.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe2_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/A8fw0bns3i1UhLLwVmK2yaDe10SE3eH0k0azAbxazc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8bv211y6lc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cafe2_clean.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/A8fw0bns3i1UhLLwVmK2yaDe10SE3eH0k0azAbxazc="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe2_clean.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe2_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/A8fw0bns3i1UhLLwVmK2yaDe10SE3eH0k0azAbxazc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/A8fw0bns3i1UhLLwVmK2yaDe10SE3eH0k0azAbxazc="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe3_clean.ioditdaadb.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe3_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105204"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wsacsjCBiiYHSuKE82L7H/qD/BTpnK3f+NTH9CC6IG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ioditdaadb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cafe3_clean.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wsacsjCBiiYHSuKE82L7H/qD/BTpnK3f+NTH9CC6IG4="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe3_clean.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe3_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105204"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wsacsjCBiiYHSuKE82L7H/qD/BTpnK3f+NTH9CC6IG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wsacsjCBiiYHSuKE82L7H/qD/BTpnK3f+NTH9CC6IG4="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe4_clean.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe4_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GlNJPQkhHbKeRGIExFYqhkTDgR1YhbGpVmEoRpKvezQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GlNJPQkhHbKeRGIExFYqhkTDgR1YhbGpVmEoRpKvezQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/cafe4_clean.qzi7hgqrnt.png",
+      "AssetFile": "C:\\project2\\Project2_MinhHungKhanh\\Project2_MinhHungKhanh\\wwwroot\\images\\cafe4_clean.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GlNJPQkhHbKeRGIExFYqhkTDgR1YhbGpVmEoRpKvezQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 12 Sep 2025 07:01:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qzi7hgqrnt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cafe4_clean.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GlNJPQkhHbKeRGIExFYqhkTDgR1YhbGpVmEoRpKvezQ="
         }
       ]
     },
@@ -7087,7 +7499,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:38:02 GMT"
+          "Value": "Fri, 12 Sep 2025 07:24:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7124,7 +7536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:38:02 GMT"
+          "Value": "Fri, 12 Sep 2025 07:24:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7169,7 +7581,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:38:02 GMT"
+          "Value": "Fri, 12 Sep 2025 07:24:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7214,7 +7626,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 09 Sep 2025 01:38:02 GMT"
+          "Value": "Fri, 12 Sep 2025 07:24:25 GMT"
         },
         {
           "Name": "Cache-Control",
