@@ -1,41 +1,35 @@
 ﻿@model IEnumerable<Project2_MinhHungKhanh.Models.MhkUser>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách người dùng";
 }
 
-<h1>Index</h1>
+<h1>Danh sách người dùng</h1>
 
 <p>
-    <a asp-action="MhkCreate">Create New</a>
+    <a asp-action="MhkCreate" class="btn btn-primary">➕ Thêm mới</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkFullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MhkEmail)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.MhkFullName)</th>
+            <th>@Html.DisplayNameFor(model => model.MhkEmail)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkFullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MhkEmail)
-            </td>
-            <td>
-                <a asp-action="MhkEdit" asp-route-id="@item.MhkUserId">Sửa</a> |
-                <a asp-action="MhkDetails" asp-route-id="@item.MhkUserId">Chi tiết</a> |
-                <a asp-action="MhkDelete" asp-route-id="@item.MhkUserId">Xóa</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MhkFullName</td>
+                <td>@item.MhkEmail</td>
+                <td>
+                    <a asp-action="MhkEdit" asp-route-id="@item.MhkUserId">✏️ Sửa</a> |
+                    <a asp-action="MhkDetails" asp-route-id="@item.MhkUserId">🔍 Chi tiết</a> |
+                    <a asp-action="MhkDelete" asp-route-id="@item.MhkUserId">🗑️ Xóa</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
